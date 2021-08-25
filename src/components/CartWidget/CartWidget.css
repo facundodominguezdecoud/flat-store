@@ -1,0 +1,15 @@
+.cart {
+    margin-top: 14px;
+    margin-left: 50px;
+}
+.fa-shopping-cart {
+    color: white;
+    padding: 2px;
+    transition: all 0.2s ease;
+}
+
+.fa-shopping-cart:hover {
+    cursor: pointer;
+    padding: 1px;
+
+}
