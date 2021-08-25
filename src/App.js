@@ -1,16 +1,10 @@
-import logo from './logo.svg';
+import NavBar from './components/NavBar/NavBar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          FLAT STORE
-        </p>
-        
-      </header>
+      <NavBar/>
     </div>
   );
 }

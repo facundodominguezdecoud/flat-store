@@ -1,0 +1,97 @@
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #16a085;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+  }
+  
+  .nav__header {
+    display: flex;
+  }
+  
+  .nav__header__title {
+    display: flex;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    font-weight:600;
+    letter-spacing: 1px
+  }
+  
+  .nav__btn {
+    display: none;
+  }
+  
+   .nav__links {
+    display: flex;
+    font-size: 18px;
+  }
+  
+   .nav__links__link {
+    display: inline-block;
+    padding: 13px 10px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px
+  }
+  
+   .nav__links__link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+   #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav__btn {
+      display: flex;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav__btn__label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav__btn__label:hover,.nav  #nav-check:checked ~ .nav__btn__label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav-check__line {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #fff;
+    }
+    .nav__links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+     .nav__links__link {
+      display: flex;
+      width: 100%;
+    }
+    #nav-check:not(:checked) ~ .nav__links {
+      height: 0px;
+    }
+     #nav-check:checked ~ .nav__links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
